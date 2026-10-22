@@ -1,0 +1,1324 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "name": "Nguyễn Văn An",
+      "email": "nguyenvanan@gmail.com",
+      "phone": "0912345678",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150",
+      "createdAt": "2026-01-10T08:00:00.000Z"
+    },
+    {
+      "id": "user-2",
+      "name": "Trần Thị Mai",
+      "email": "tranmai98@gmail.com",
+      "phone": "0987654321",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150",
+      "createdAt": "2026-02-15T09:30:00.000Z"
+    },
+    {
+      "id": "user-3",
+      "name": "Lê Hoàng Long",
+      "email": "hoanglong.le@gmail.com",
+      "phone": "0905123456",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=150",
+      "createdAt": "2026-03-20T14:15:00.000Z"
+    },
+    {
+      "id": "user-4",
+      "name": "Phạm Thùy Linh",
+      "email": "admin.linh@foodhub.vn",
+      "phone": "0977889900",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "addr-1",
+      "userId": "user-1",
+      "recipientName": "Nguyễn Văn An",
+      "phone": "0912345678",
+      "street": "Số 12 Chùa Bộc",
+      "ward": "Phường Quang Trung",
+      "district": "Quận Đống Đa",
+      "city": "Hà Nội",
+      "isDefault": true
+    },
+    {
+      "id": "addr-2",
+      "userId": "user-1",
+      "recipientName": "Nguyễn Văn An (Công ty)",
+      "phone": "0912345678",
+      "street": "Số 8 Tôn Thất Thuyết",
+      "ward": "Phường Mỹ Đình 2",
+      "district": "Quận Nam Từ Liêm",
+      "city": "Hà Nội",
+      "isDefault": false
+    },
+    {
+      "id": "addr-3",
+      "userId": "user-2",
+      "recipientName": "Trần Thị Mai",
+      "phone": "0987654321",
+      "street": "Số 88 Cầu Giấy",
+      "ward": "Phường Quan Hoa",
+      "district": "Quận Cầu Giấy",
+      "city": "Hà Nội",
+      "isDefault": true
+    },
+    {
+      "id": "addr-4",
+      "userId": "user-3",
+      "recipientName": "Lê Hoàng Long",
+      "phone": "0905123456",
+      "street": "Số 25 Nguyễn Chí Thanh",
+      "ward": "Phường Ngọc Khánh",
+      "district": "Quận Ba Đình",
+      "city": "Hà Nội",
+      "isDefault": true
+    },
+    {
+      "id": "addr-5",
+      "userId": "user-4",
+      "recipientName": "Phạm Thùy Linh",
+      "phone": "0977889900",
+      "street": "Số 102 Bà Triệu",
+      "ward": "Phường Hàng Bài",
+      "district": "Quận Hoàn Kiếm",
+      "city": "Hà Nội",
+      "isDefault": true
+    }
+  ],
+  "restaurants": [
+    {
+      "id": "res-1",
+      "name": "KFC - Nguyễn Trãi",
+      "description": "Thương hiệu gà rán trứ danh hương vị thơm cay đặc trưng và burger hảo hạng.",
+      "address": "123 Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Hà Nội",
+      "phone": "02438581234",
+      "rating": 4.6,
+      "reviewCount": 128,
+      "openingHours": "09:00 - 22:30",
+      "deliveryTime": "20-30 phút",
+      "deliveryFee": 16000,
+      "minOrder": 50000,
+      "image": "https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-2",
+      "name": "Lotteria - Cầu Giấy",
+      "description": "Chuỗi thức ăn nhanh chuẩn vị Hàn Quốc với các món burger gà và cơm hấp dẫn.",
+      "address": "245 Cầu Giấy, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội",
+      "phone": "02437671122",
+      "rating": 4.4,
+      "reviewCount": 95,
+      "openingHours": "08:30 - 22:00",
+      "deliveryTime": "25-35 phút",
+      "deliveryFee": 18000,
+      "minOrder": 40000,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-3",
+      "name": "The Pizza Company - Times City",
+      "description": "Pizza phong cách Ý đế vàng giòn rụm, ngập tràn phô mai hảo hạng.",
+      "address": "Tầng B1, TTTM Times City, 458 Minh Khai, Quận Hai Bà Trưng, Hà Nội",
+      "phone": "19006066",
+      "rating": 4.7,
+      "reviewCount": 210,
+      "openingHours": "10:00 - 22:00",
+      "deliveryTime": "30-40 phút",
+      "deliveryFee": 22000,
+      "minOrder": 100000,
+      "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-4",
+      "name": "Bánh Mì Huỳnh Hoa - Phố Cổ",
+      "description": "Bánh mì đặc sản trứ danh với lượng pate béo ngậy và thịt nguội dồi dào.",
+      "address": "88 Hàng Bông, Phường Hàng Bông, Quận Hoàn Kiếm, Hà Nội",
+      "phone": "0903822999",
+      "rating": 4.8,
+      "reviewCount": 340,
+      "openingHours": "07:00 - 21:30",
+      "deliveryTime": "15-25 phút",
+      "deliveryFee": 15000,
+      "minOrder": 35000,
+      "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-5",
+      "name": "Cơm Tấm Phúc Lộc Thọ - Đống Đa",
+      "description": "Cơm tấm chuẩn vị Sài Gòn, sườn nướng đậm đà, chả trứng béo thơm bùi.",
+      "address": "32 Xã Đàn, Phường Phương Liên, Quận Đống Đa, Hà Nội",
+      "phone": "0901234567",
+      "rating": 4.5,
+      "reviewCount": 156,
+      "openingHours": "06:30 - 22:00",
+      "deliveryTime": "20-30 phút",
+      "deliveryFee": 17000,
+      "minOrder": 40000,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-6",
+      "name": "Trà Sữa Gong Cha - Phố Huế",
+      "description": "Trà sữa Đài Loan cao cấp cùng lớp kem milk foam béo mặn chuẩn vị.",
+      "address": "15 Phố Huế, Phường Hàng Bài, Quận Hoàn Kiếm, Hà Nội",
+      "phone": "02439441234",
+      "rating": 4.7,
+      "reviewCount": 280,
+      "openingHours": "09:00 - 22:30",
+      "deliveryTime": "15-25 phút",
+      "deliveryFee": 14000,
+      "minOrder": 30000,
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-7",
+      "name": "Phở Thìn Lò Đúc - Cơ Sở Mỹ Đình",
+      "description": "Hương vị phở bò tái lăn trứ danh Hà Nội đậm đà hành lá và tỏi xào thơm lừng.",
+      "address": "16 Lê Đức Thọ, Phường Mỹ Đình 2, Quận Nam Từ Liêm, Hà Nội",
+      "phone": "0987654321",
+      "rating": 4.6,
+      "reviewCount": 185,
+      "openingHours": "06:00 - 21:00",
+      "deliveryTime": "25-35 phút",
+      "deliveryFee": 19000,
+      "minOrder": 50000,
+      "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=1200",
+      "isActive": true
+    },
+    {
+      "id": "res-8",
+      "name": "Jollibee - Royal City",
+      "description": "Gà giòn vui vẻ, mỳ Ý sốt bò bằm đậm vị dành cho mọi lứa tuổi gia đình.",
+      "address": "Tầng B2, Royal City, 72A Nguyễn Trãi, Quận Thanh Xuân, Hà Nội",
+      "phone": "19001533",
+      "rating": 4.5,
+      "reviewCount": 142,
+      "openingHours": "09:30 - 22:00",
+      "deliveryTime": "20-30 phút",
+      "deliveryFee": 16000,
+      "minOrder": 40000,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600",
+      "coverImage": "https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=1200",
+      "isActive": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-1",
+      "name": "Burger & Gà Rán",
+      "slug": "burger-ga-ran",
+      "description": "Các món burger bò, gà giòn cay, khoai tây chiên đậm vị.",
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300"
+    },
+    {
+      "id": "cat-2",
+      "name": "Pizza & Mỳ Ý",
+      "slug": "pizza-my-y",
+      "description": "Pizza nướng nóng hổi, ngập phô mai mozzarella và sợi mỳ Ý đậm đà.",
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300"
+    },
+    {
+      "id": "cat-3",
+      "name": "Cơm & Món Việt",
+      "slug": "com-mon-viet",
+      "description": "Cơm tấm, cơm gà, món ăn gia đình trọn vẹn hương vị truyền thống.",
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300"
+    },
+    {
+      "id": "cat-4",
+      "name": "Bánh Mì & Ăn Sáng",
+      "slug": "banh-mi-an-sang",
+      "description": "Bánh mì giòn rụm với nhân pate chả lụa đậm vị Việt Nam.",
+      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=300"
+    },
+    {
+      "id": "cat-5",
+      "name": "Trà Sữa & Cà Phê",
+      "slug": "tra-sua-ca-phe",
+      "description": "Trà sữa trân châu, milk foam sánh mịn và cà phê Việt Nam thơm ngon.",
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?w=300"
+    },
+    {
+      "id": "cat-6",
+      "name": "Ăn Vặt & Tráng Miệng",
+      "slug": "an-vat-trang-mieng",
+      "description": "Khoai tây lắc, bánh ngọt, kem tươi mát lạnh cho bữa xế.",
+      "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=300"
+    },
+    {
+      "id": "cat-7",
+      "name": "Mì, Bún & Phở",
+      "slug": "mi-bun-pho",
+      "description": "Phở bò nước ngọt thanh, bún bò huế đậm đà ấm áp.",
+      "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=300"
+    },
+    {
+      "id": "cat-8",
+      "name": "Đồ Uống & Nước Ép",
+      "slug": "do-uong-nuoc-ep",
+      "description": "Nước ngọt có gas giải khát, nước ép trái cây tươi thanh lọc cơ thể.",
+      "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=300"
+    }
+  ],
+  "foods": [
+    {
+      "id": "food-1",
+      "restaurantId": "res-1",
+      "categoryId": "cat-1",
+      "name": "Gà Rán Giòn Cay (1 miếng)",
+      "description": "1 miếng gà rán giòn rụm, thịt mềm mọng nước, tẩm ướp sốt ớt cay đặc trưng KFC.",
+      "price": 39000,
+      "originalPrice": 45000,
+      "image": "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 1250
+    },
+    {
+      "id": "food-2",
+      "restaurantId": "res-1",
+      "categoryId": "cat-1",
+      "name": "Burger Zinger Cay",
+      "description": "Burger phi lê gà phi tiêu chiên giòn, rau xà lách tươi và sốt mayonnaise béo cay hảo hạng.",
+      "price": 65000,
+      "originalPrice": 72000,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 890
+    },
+    {
+      "id": "food-3",
+      "restaurantId": "res-1",
+      "categoryId": "cat-6",
+      "name": "Khoai Tây Chiên Cỡ Vừa",
+      "description": "Khoai tây cắt que chiên giòn vàng đều, rắc thêm chút muối nhẹ ăn kèm tương cà.",
+      "price": 25000,
+      "originalPrice": 28000,
+      "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600",
+      "isAvailable": true,
+      "rating": 4.5,
+      "soldCount": 650
+    },
+    {
+      "id": "food-4",
+      "restaurantId": "res-1",
+      "categoryId": "cat-3",
+      "name": "Cơm Gà Giòn Cay KFC",
+      "description": "Cơm nấu nước hầm gà thơm dẻo ăn kèm 1 miếng gà giòn cay, xà lách và canh súp.",
+      "price": 49000,
+      "originalPrice": 55000,
+      "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 540
+    },
+    {
+      "id": "food-5",
+      "restaurantId": "res-1",
+      "categoryId": "cat-8",
+      "name": "Pepsi Lon 330ml",
+      "description": "Nước ngọt có gas Pepsi ướp lạnh sảng khoái đánh thức mọi vị giác.",
+      "price": 18000,
+      "originalPrice": 20000,
+      "image": "https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 2100
+    },
+    {
+      "id": "food-6",
+      "restaurantId": "res-2",
+      "categoryId": "cat-1",
+      "name": "Burger Bò Phô Mai",
+      "description": "Bánh burger vỏ mềm nướng thơm kẹp thịt bò áp chảo, phô mai cheddar tan chảy và dưa chuột chua.",
+      "price": 49000,
+      "originalPrice": 55000,
+      "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=600",
+      "isAvailable": true,
+      "rating": 4.5,
+      "soldCount": 780
+    },
+    {
+      "id": "food-7",
+      "restaurantId": "res-2",
+      "categoryId": "cat-1",
+      "name": "Gà Rán Sốt Phô Mai (1 miếng)",
+      "description": "Gà rán phủ đẫm sốt phô mai béo ngậy ngọt mặn cực kỳ cuốn hút.",
+      "price": 42000,
+      "originalPrice": 48000,
+      "image": "https://images.unsplash.com/photo-1527477321055-43615862e771?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 670
+    },
+    {
+      "id": "food-8",
+      "restaurantId": "res-2",
+      "categoryId": "cat-6",
+      "name": "Mực Chiên Giòn Cỡ Vừa",
+      "description": "Mực vòng lăn bột xù chiên vàng ruộm, giòn sần sật chấm kèm sốt tương ớt ngọt.",
+      "price": 38000,
+      "originalPrice": 42000,
+      "image": "https://images.unsplash.com/photo-1604909052743-94e838986d24?w=600",
+      "isAvailable": true,
+      "rating": 4.4,
+      "soldCount": 390
+    },
+    {
+      "id": "food-9",
+      "restaurantId": "res-2",
+      "categoryId": "cat-3",
+      "name": "Cơm Thịt Heo Phô Mai",
+      "description": "Cơm trắng ăn kèm thịt heo tẩm bột chiên xù giòn tan bọc lớp phô mai kéo sợi.",
+      "price": 52000,
+      "originalPrice": 59000,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600",
+      "isAvailable": true,
+      "rating": 4.5,
+      "soldCount": 420
+    },
+    {
+      "id": "food-10",
+      "restaurantId": "res-2",
+      "categoryId": "cat-8",
+      "name": "Trà Đào Cam Sả",
+      "description": "Vị trà thanh mát hòa quyện hương thơm sả cây, cam tươi và những miếng đào giòn ngọt.",
+      "price": 29000,
+      "originalPrice": 35000,
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 830
+    },
+    {
+      "id": "food-11",
+      "restaurantId": "res-3",
+      "categoryId": "cat-2",
+      "name": "Pizza Hải Sản Pesto Xanh (Size M)",
+      "description": "Tôm sú, mực tươi, thanh cua và nấm trên nền sốt lá quế tây Pesto xanh thơm lừng phủ phô mai Mozzarella.",
+      "price": 189000,
+      "originalPrice": 219000,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 1150
+    },
+    {
+      "id": "food-12",
+      "restaurantId": "res-3",
+      "categoryId": "cat-2",
+      "name": "Pizza Thịt Nguội & Nấm (Size M)",
+      "description": "Pizza truyền thống với giăm bông thơm ngậy kết hợp nấm mỡ tươi, phủ sốt cà chua và phô mai nướng vàng.",
+      "price": 159000,
+      "originalPrice": 179000,
+      "image": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 820
+    },
+    {
+      "id": "food-13",
+      "restaurantId": "res-3",
+      "categoryId": "cat-2",
+      "name": "Mỳ Ý Cay Hải Sản",
+      "description": "Sợi mỳ Ý dai chuẩn xào cùng tôm, mực, ớt khô và dầu oliu thơm nồng đậm đà.",
+      "price": 119000,
+      "originalPrice": 139000,
+      "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281691?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 460
+    },
+    {
+      "id": "food-14",
+      "restaurantId": "res-3",
+      "categoryId": "cat-6",
+      "name": "Cánh Gà Nướng BBQ (4 miếng)",
+      "description": "Cánh gà tươi tẩm ướp nước sốt BBQ vị cay ngọt đậm đà, nướng óng ánh thơm ngát.",
+      "price": 89000,
+      "originalPrice": 99000,
+      "image": "https://images.unsplash.com/photo-1527477321055-43615862e771?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 610
+    },
+    {
+      "id": "food-15",
+      "restaurantId": "res-3",
+      "categoryId": "cat-8",
+      "name": "Coca-Cola Tươi Ly Lớn",
+      "description": "Coca-Cola tươi rói mát lạnh sảng khoái với nhiều bọt khí li ti sảng khoái.",
+      "price": 22000,
+      "originalPrice": 25000,
+      "image": "https://images.unsplash.com/photo-1554866585-cd94860890b7?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 1300
+    },
+    {
+      "id": "food-16",
+      "restaurantId": "res-4",
+      "categoryId": "cat-4",
+      "name": "Bánh Mì Thịt Nguội Đặc Biệt",
+      "description": "Bánh mì giòn rụm kẹp 5 loại giăm bông, chả lụa cao cấp, pate gan béo ngậy và bơ thơm.",
+      "price": 68000,
+      "originalPrice": 75000,
+      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 2340
+    },
+    {
+      "id": "food-17",
+      "restaurantId": "res-4",
+      "categoryId": "cat-4",
+      "name": "Bánh Mì Pate Chả Bò",
+      "description": "Chả bò Đà Nẵng thơm nồng vị tiêu đen kết hợp cùng pate gia truyền thơm lừng và dưa góp thanh vị.",
+      "price": 55000,
+      "originalPrice": 60000,
+      "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 980
+    },
+    {
+      "id": "food-18",
+      "restaurantId": "res-4",
+      "categoryId": "cat-4",
+      "name": "Bánh Mì Xíu Mại Sốt Trứng Muối",
+      "description": "Viên xíu mại thịt heo mềm thơm đẫm sốt cà chua ấm nóng cùng vụn trứng muối bùi béo.",
+      "price": 60000,
+      "originalPrice": 65000,
+      "image": "https://images.unsplash.com/photo-1509722747041-616f39b57569?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 810
+    },
+    {
+      "id": "food-19",
+      "restaurantId": "res-4",
+      "categoryId": "cat-8",
+      "name": "Sữa Đậu Nành Tươi Lá Dứa",
+      "description": "Sữa đậu nành nguyên chất nấu thủ công hàng ngày thơm ngan ngát mùi lá dứa tự nhiên.",
+      "price": 18000,
+      "originalPrice": 22000,
+      "image": "https://images.unsplash.com/photo-1613478223719-2ab802602423?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 730
+    },
+    {
+      "id": "food-20",
+      "restaurantId": "res-4",
+      "categoryId": "cat-6",
+      "name": "Bánh Su Kem Phô Mai (Hộp 4 cái)",
+      "description": "Vỏ bánh su xốp nhẹ bọc trọn dòng kem custard phô mai mát lạnh béo thơm ngọt dịu.",
+      "price": 35000,
+      "originalPrice": 40000,
+      "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 540
+    },
+    {
+      "id": "food-21",
+      "restaurantId": "res-5",
+      "categoryId": "cat-3",
+      "name": "Cơm Tấm Sườn Nướng Muối Ớt",
+      "description": "Dĩa cơm tấm hạt vỡ dẻo thơm ăn cùng miếng sườn cốt lết dày dặn nướng than hoa cay tê đậm vị.",
+      "price": 59000,
+      "originalPrice": 65000,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 1620
+    },
+    {
+      "id": "food-22",
+      "restaurantId": "res-5",
+      "categoryId": "cat-3",
+      "name": "Cơm Tấm Sườn Bì Chả Đặc Biệt",
+      "description": "Phần cơm tấm thập cẩm chuẩn vị gồm sườn nướng mọng nước, bì heo trộn thính thơm giòn và chả trứng hấp mềm xốp.",
+      "price": 69000,
+      "originalPrice": 75000,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 2400
+    },
+    {
+      "id": "food-23",
+      "restaurantId": "res-5",
+      "categoryId": "cat-3",
+      "name": "Cơm Tấm Đùi Gà Nướng Mật Ong",
+      "description": "Đùi gà góc tư ướp mật ong rừng nướng vàng ươm, da gà giòn ngọt bóng bẩy kèm nước mắm kẹo.",
+      "price": 62000,
+      "originalPrice": 68000,
+      "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 890
+    },
+    {
+      "id": "food-24",
+      "restaurantId": "res-5",
+      "categoryId": "cat-3",
+      "name": "Canh Khổ Qua Nhồi Thịt",
+      "description": "Tô canh khổ qua thanh nhiệt nấu cùng nước hầm xương ngọt lịm và thịt băm nhồi mộc nhĩ.",
+      "price": 25000,
+      "originalPrice": 30000,
+      "image": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600",
+      "isAvailable": true,
+      "rating": 4.5,
+      "soldCount": 610
+    },
+    {
+      "id": "food-25",
+      "restaurantId": "res-5",
+      "categoryId": "cat-8",
+      "name": "Trà Tắc Hạt É Ly Khổng Lồ",
+      "description": "Trà lài ngào ngạt hương tắc chua dịu kết hợp hạt é giòn mát xua tan cơn khát ngày hè.",
+      "price": 20000,
+      "originalPrice": 25000,
+      "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 1450
+    },
+    {
+      "id": "food-26",
+      "restaurantId": "res-6",
+      "categoryId": "cat-5",
+      "name": "Trà Sữa Trân Châu Hoàng Kim (Size M)",
+      "description": "Trà đen nguyên bản pha sữa béo thơm kết hợp trân châu hoàng kim giòn dai đượm mật ong rừng.",
+      "price": 55000,
+      "originalPrice": 62000,
+      "image": "https://images.unsplash.com/photo-1558857563-b371033873b8?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 3100
+    },
+    {
+      "id": "food-27",
+      "restaurantId": "res-6",
+      "categoryId": "cat-5",
+      "name": "Trà Alisan Kem Sữa (Milk Foam)",
+      "description": "Cốt trà Alisan núi cao thanh khiết phủ lớp kem sữa milk foam đặc sánh mằn mặn béo ngậy.",
+      "price": 58000,
+      "originalPrice": 65000,
+      "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 1820
+    },
+    {
+      "id": "food-28",
+      "restaurantId": "res-6",
+      "categoryId": "cat-5",
+      "name": "Trà Xanh Xoài Đá Xay",
+      "description": "Xoài chín tươi xay nhuyễn cùng trà xanh thơm phức và lớp thạch dừa giòn sần sật mát lạnh.",
+      "price": 62000,
+      "originalPrice": 70000,
+      "image": "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 750
+    },
+    {
+      "id": "food-29",
+      "restaurantId": "res-6",
+      "categoryId": "cat-5",
+      "name": "Cà Phê Latte Sữa Tươi Đường Đen",
+      "description": "Cà phê espresso thơm đậm kết hợp sữa tươi thanh trùng Dalat Milk và sốt đường đen hữu cơ.",
+      "price": 52000,
+      "originalPrice": 58000,
+      "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 680
+    },
+    {
+      "id": "food-30",
+      "restaurantId": "res-6",
+      "categoryId": "cat-6",
+      "name": "Bánh Mousse Trà Xanh",
+      "description": "Bánh mousse bột matcha Nhật Bản thanh tao, lớp bánh mềm mượt tan ngay trên đầu lưỡi.",
+      "price": 42000,
+      "originalPrice": 48000,
+      "image": "https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 420
+    },
+    {
+      "id": "food-31",
+      "restaurantId": "res-7",
+      "categoryId": "cat-7",
+      "name": "Phở Bò Tái Lăn Truyền Thống",
+      "description": "Thịt bò tươi xào lăn lửa lớn dậy mùi tỏi thơm lừng, ngập tràn hành lá tươi trong nước dùng hầm xương bò 24h.",
+      "price": 75000,
+      "originalPrice": 85000,
+      "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 2750
+    },
+    {
+      "id": "food-32",
+      "restaurantId": "res-7",
+      "categoryId": "cat-7",
+      "name": "Phở Bò Chín Nạm Gàu",
+      "description": "Tô phở đậm đà với những lát nạm gàu bò giòn sần sật, béo ngậy mà không hề ngấy.",
+      "price": 70000,
+      "originalPrice": 80000,
+      "image": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 1100
+    },
+    {
+      "id": "food-33",
+      "restaurantId": "res-7",
+      "categoryId": "cat-7",
+      "name": "Bún Bò Huế Chả Cua",
+      "description": "Nước dùng ruốc sả cay nồng đặc sắc xứ Huế, bắp bò hoa giòn, chả cua thơm mềm và móng giò giòn sần sật.",
+      "price": 68000,
+      "originalPrice": 75000,
+      "image": "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 890
+    },
+    {
+      "id": "food-34",
+      "restaurantId": "res-7",
+      "categoryId": "cat-6",
+      "name": "Quẩy Giòn Ăn Kèm Phở (5 cái)",
+      "description": "Quẩy chiên vàng ruộm giòn tan, nhúng nước dùng phở nóng hổi ăn cực đã.",
+      "price": 15000,
+      "originalPrice": 18000,
+      "image": "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 1950
+    },
+    {
+      "id": "food-35",
+      "restaurantId": "res-7",
+      "categoryId": "cat-8",
+      "name": "Trà Đá Tràng An",
+      "description": "Cốc trà nhài đá đậm vị truyền thống Hà Thành thơm mát thanh tao.",
+      "price": 5000,
+      "originalPrice": 5000,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600",
+      "isAvailable": true,
+      "rating": 4.9,
+      "soldCount": 4200
+    },
+    {
+      "id": "food-36",
+      "restaurantId": "res-8",
+      "categoryId": "cat-1",
+      "name": "Gà Sài Gòn Sốt Cay (1 miếng)",
+      "description": "Miếng gà giòn rụm phủ lớp sốt cay ngọt kiểu Philippines thơm nồng và hấp dẫn.",
+      "price": 40000,
+      "originalPrice": 46000,
+      "image": "https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?w=600",
+      "isAvailable": true,
+      "rating": 4.6,
+      "soldCount": 1420
+    },
+    {
+      "id": "food-37",
+      "restaurantId": "res-8",
+      "categoryId": "cat-2",
+      "name": "Mỳ Ý Sốt Bò Bằm Jollibee",
+      "description": "Sợi mỳ mềm ngon phủ sốt thịt bò bằm cà chua ngọt thanh cùng phô mai cheddar bào sợi và xúc xích.",
+      "price": 45000,
+      "originalPrice": 50000,
+      "image": "https://images.unsplash.com/photo-1621996346565-e3d5d6281691?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 1980
+    },
+    {
+      "id": "food-38",
+      "restaurantId": "res-8",
+      "categoryId": "cat-1",
+      "name": "Burger Gà Giòn Mayo",
+      "description": "Vỏ burger mè nướng kẹp gà tẩm bột xù chiên giòn, bắp cải thái nhỏ và sốt ngọt đặc trưng.",
+      "price": 42000,
+      "originalPrice": 48000,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600",
+      "isAvailable": true,
+      "rating": 4.5,
+      "soldCount": 740
+    },
+    {
+      "id": "food-39",
+      "restaurantId": "res-8",
+      "categoryId": "cat-6",
+      "name": "Khoai Tây Lắc Phô Mai",
+      "description": "Khoai tây chiên vàng giòn rụm lắc đều cùng bột phô mai thơm lừng béo ngậy ngọt nhẹ.",
+      "price": 28000,
+      "originalPrice": 32000,
+      "image": "https://images.unsplash.com/photo-1576107232684-1279f3908594?w=600",
+      "isAvailable": true,
+      "rating": 4.7,
+      "soldCount": 1130
+    },
+    {
+      "id": "food-40",
+      "restaurantId": "res-8",
+      "categoryId": "cat-6",
+      "name": "Kem Ốc Quế Vani Socola",
+      "description": "Kem tươi vị socola vani béo ngậy mát lạnh cuộn trong vỏ ốc quế nướng giòn rụm.",
+      "price": 12000,
+      "originalPrice": 15000,
+      "image": "https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600",
+      "isAvailable": true,
+      "rating": 4.8,
+      "soldCount": 1560
+    }
+  ],
+  "foodOptions": [
+    {
+      "id": "opt-1",
+      "name": "Mức độ cay",
+      "type": "radio",
+      "required": true,
+      "items": [
+        { "id": "opt-item-101", "name": "Không cay", "price": 0 },
+        { "id": "opt-item-102", "name": "Cay vừa", "price": 0 },
+        { "id": "opt-item-103", "name": "Cay nhiều", "price": 0 }
+      ]
+    },
+    {
+      "id": "opt-2",
+      "name": "Kích cỡ Burger / Gà",
+      "type": "radio",
+      "required": true,
+      "items": [
+        { "id": "opt-item-201", "name": "Cỡ Tiêu chuẩn", "price": 0 },
+        { "id": "opt-item-202", "name": "Cỡ Lớn (Up Size)", "price": 15000 }
+      ]
+    },
+    {
+      "id": "opt-3",
+      "name": "Đế bánh Pizza",
+      "type": "radio",
+      "required": false,
+      "items": [
+        { "id": "opt-item-301", "name": "Đế dày truyền thống", "price": 0 },
+        { "id": "opt-item-302", "name": "Đế mỏng giòn", "price": 0 },
+        { "id": "opt-item-303", "name": "Viền phô mai béo ngậy", "price": 35000 }
+      ]
+    },
+    {
+      "id": "opt-4",
+      "name": "Topping Trà Sữa",
+      "type": "checkbox",
+      "required": false,
+      "items": [
+        { "id": "opt-item-401", "name": "Trân châu hoàng kim", "price": 10000 },
+        { "id": "opt-item-402", "name": "Thạch pudding trứng", "price": 10000 },
+        { "id": "opt-item-403", "name": "Kem sữa Milk Foam", "price": 15000 },
+        { "id": "opt-item-404", "name": "Thạch dừa giòn", "price": 8000 }
+      ]
+    },
+    {
+      "id": "opt-5",
+      "name": "Mức đường & đá",
+      "type": "radio",
+      "required": true,
+      "items": [
+        { "id": "opt-item-501", "name": "100% đường - 100% đá", "price": 0 },
+        { "id": "opt-item-502", "name": "70% đường - 70% đá", "price": 0 },
+        { "id": "opt-item-503", "name": "50% đường - 50% đá", "price": 0 },
+        { "id": "opt-item-504", "name": "Không đường - Không đá", "price": 0 }
+      ]
+    },
+    {
+      "id": "opt-6",
+      "name": "Món ăn kèm Cơm Tấm",
+      "type": "checkbox",
+      "required": false,
+      "items": [
+        { "id": "opt-item-601", "name": "Trứng ốp la lòng đào", "price": 10000 },
+        { "id": "opt-item-602", "name": "Thêm chả bì", "price": 12000 },
+        { "id": "opt-item-603", "name": "Cơm thêm dẻo thơm", "price": 8000 }
+      ]
+    },
+    {
+      "id": "opt-7",
+      "name": "Tùy chọn Bánh Mì",
+      "type": "checkbox",
+      "required": false,
+      "items": [
+        { "id": "opt-item-701", "name": "Thêm pate béo ngậy", "price": 10000 },
+        { "id": "opt-item-702", "name": "Không cho rau mùi, dưa leo", "price": 0 },
+        { "id": "opt-item-703", "name": "Ăn cay nhiều ớt tươi", "price": 0 }
+      ]
+    },
+    {
+      "id": "opt-8",
+      "name": "Tùy chọn Phở / Bún",
+      "type": "checkbox",
+      "required": false,
+      "items": [
+        { "id": "opt-item-801", "name": "Thêm trứng chần béo ngậy", "price": 10000 },
+        { "id": "opt-item-802", "name": "Thêm thịt tái lăn", "price": 25000 },
+        { "id": "opt-item-803", "name": "Ăn nhiều hành hoa, đầu hành", "price": 0 }
+      ]
+    }
+  ],
+  "carts": [
+    {
+      "id": "cart-1",
+      "userId": "user-1",
+      "restaurantId": "res-1",
+      "items": [
+        {
+          "foodId": "food-2",
+          "name": "Burger Zinger Cay",
+          "price": 65000,
+          "quantity": 2,
+          "selectedOptions": [
+            { "name": "Mức độ cay", "choice": "Cay vừa", "price": 0 }
+          ]
+        },
+        {
+          "foodId": "food-3",
+          "name": "Khoai Tây Chiên Cỡ Vừa",
+          "price": 25000,
+          "quantity": 1,
+          "selectedOptions": []
+        }
+      ],
+      "totalAmount": 155000,
+      "updatedAt": "2026-10-22T08:30:00.000Z"
+    },
+    {
+      "id": "cart-2",
+      "userId": "user-2",
+      "restaurantId": "res-6",
+      "items": [
+        {
+          "foodId": "food-26",
+          "name": "Trà Sữa Trân Châu Hoàng Kim (Size M)",
+          "price": 55000,
+          "quantity": 2,
+          "selectedOptions": [
+            { "name": "Mức đường & đá", "choice": "50% đường - 50% đá", "price": 0 },
+            { "name": "Topping Trà Sữa", "choice": "Kem sữa Milk Foam", "price": 15000 }
+          ]
+        }
+      ],
+      "totalAmount": 140000,
+      "updatedAt": "2026-10-22T09:15:00.000Z"
+    },
+    {
+      "id": "cart-3",
+      "userId": "user-3",
+      "restaurantId": "res-4",
+      "items": [
+        {
+          "foodId": "food-16",
+          "name": "Bánh Mì Thịt Nguội Đặc Biệt",
+          "price": 68000,
+          "quantity": 1,
+          "selectedOptions": [
+            { "name": "Tùy chọn Bánh Mì", "choice": "Thêm pate béo ngậy", "price": 10000 }
+          ]
+        }
+      ],
+      "totalAmount": 78000,
+      "updatedAt": "2026-10-21T18:00:00.000Z"
+    },
+    {
+      "id": "cart-4",
+      "userId": "user-4",
+      "restaurantId": "res-5",
+      "items": [],
+      "totalAmount": 0,
+      "updatedAt": "2026-10-20T12:00:00.000Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-1",
+      "userId": "user-1",
+      "restaurantId": "res-1",
+      "addressId": "addr-1",
+      "items": [
+        {
+          "foodId": "food-1",
+          "name": "Gà Rán Giòn Cay (1 miếng)",
+          "price": 39000,
+          "quantity": 2,
+          "selectedOptions": [
+            { "name": "Mức độ cay", "choice": "Cay nhiều", "price": 0 }
+          ]
+        },
+        {
+          "foodId": "food-5",
+          "name": "Pepsi Lon 330ml",
+          "price": 18000,
+          "quantity": 2,
+          "selectedOptions": []
+        }
+      ],
+      "subtotal": 114000,
+      "deliveryFee": 16000,
+      "discount": 20000,
+      "totalAmount": 110000,
+      "paymentMethod": "MOMO",
+      "status": "COMPLETED",
+      "note": "Giao trước sảnh chung cư giúp mình.",
+      "createdAt": "2026-10-18T11:45:00.000Z",
+      "updatedAt": "2026-10-18T12:20:00.000Z"
+    },
+    {
+      "id": "order-2",
+      "userId": "user-2",
+      "restaurantId": "res-3",
+      "addressId": "addr-3",
+      "items": [
+        {
+          "foodId": "food-11",
+          "name": "Pizza Hải Sản Pesto Xanh (Size M)",
+          "price": 189000,
+          "quantity": 1,
+          "selectedOptions": [
+            { "name": "Đế bánh Pizza", "choice": "Viền phô mai béo ngậy", "price": 35000 }
+          ]
+        },
+        {
+          "foodId": "food-14",
+          "name": "Cánh Gà Nướng BBQ (4 miếng)",
+          "price": 89000,
+          "quantity": 1,
+          "selectedOptions": []
+        }
+      ],
+      "subtotal": 313000,
+      "deliveryFee": 22000,
+      "discount": 22000,
+      "totalAmount": 313000,
+      "paymentMethod": "COD",
+      "status": "COMPLETED",
+      "note": "Cho nhiều tương ớt và tương cà nhé.",
+      "createdAt": "2026-10-19T18:30:00.000Z",
+      "updatedAt": "2026-10-19T19:15:00.000Z"
+    },
+    {
+      "id": "order-3",
+      "userId": "user-3",
+      "restaurantId": "res-5",
+      "addressId": "addr-4",
+      "items": [
+        {
+          "foodId": "food-22",
+          "name": "Cơm Tấm Sườn Bì Chả Đặc Biệt",
+          "price": 69000,
+          "quantity": 2,
+          "selectedOptions": [
+            { "name": "Món ăn kèm Cơm Tấm", "choice": "Trứng ốp la lòng đào", "price": 10000 }
+          ]
+        },
+        {
+          "foodId": "food-24",
+          "name": "Canh Khổ Qua Nhồi Thịt",
+          "price": 25000,
+          "quantity": 1,
+          "selectedOptions": []
+        }
+      ],
+      "subtotal": 183000,
+      "deliveryFee": 17000,
+      "discount": 0,
+      "totalAmount": 200000,
+      "paymentMethod": "VNPAY",
+      "status": "COMPLETED",
+      "note": "Nhiều tóp mỡ và nước mắm riêng giúp mình.",
+      "createdAt": "2026-10-20T12:00:00.000Z",
+      "updatedAt": "2026-10-20T12:40:00.000Z"
+    },
+    {
+      "id": "order-4",
+      "userId": "user-1",
+      "restaurantId": "res-6",
+      "addressId": "addr-2",
+      "items": [
+        {
+          "foodId": "food-26",
+          "name": "Trà Sữa Trân Châu Hoàng Kim (Size M)",
+          "price": 55000,
+          "quantity": 3,
+          "selectedOptions": [
+            { "name": "Mức đường & đá", "choice": "70% đường - 70% đá", "price": 0 }
+          ]
+        },
+        {
+          "foodId": "food-30",
+          "name": "Bánh Mousse Trà Xanh",
+          "price": 42000,
+          "quantity": 1,
+          "selectedOptions": []
+        }
+      ],
+      "subtotal": 207000,
+      "deliveryFee": 14000,
+      "discount": 50000,
+      "totalAmount": 171000,
+      "paymentMethod": "MOMO",
+      "status": "DELIVERING",
+      "note": "Gọi điện trước khi giao tới quầy lễ tân.",
+      "createdAt": "2026-10-22T15:30:00.000Z",
+      "updatedAt": "2026-10-22T15:45:00.000Z"
+    },
+    {
+      "id": "order-5",
+      "userId": "user-2",
+      "restaurantId": "res-7",
+      "addressId": "addr-3",
+      "items": [
+        {
+          "foodId": "food-31",
+          "name": "Phở Bò Tái Lăn Truyền Thống",
+          "price": 75000,
+          "quantity": 2,
+          "selectedOptions": [
+            { "name": "Tùy chọn Phở / Bún", "choice": "Thêm trứng chần béo ngậy", "price": 10000 }
+          ]
+        },
+        {
+          "foodId": "food-34",
+          "name": "Quẩy Giòn Ăn Kèm Phở (5 cái)",
+          "price": 15000,
+          "quantity": 1,
+          "selectedOptions": []
+        }
+      ],
+      "subtotal": 185000,
+      "deliveryFee": 19000,
+      "discount": 0,
+      "totalAmount": 204000,
+      "paymentMethod": "COD",
+      "status": "CONFIRMED",
+      "note": "Nước dùng thật sôi nóng và để bánh phở riêng.",
+      "createdAt": "2026-10-22T16:00:00.000Z",
+      "updatedAt": "2026-10-22T16:05:00.000Z"
+    },
+    {
+      "id": "order-6",
+      "userId": "user-3",
+      "restaurantId": "res-8",
+      "addressId": "addr-4",
+      "items": [
+        {
+          "foodId": "food-36",
+          "name": "Gà Sài Gòn Sốt Cay (1 miếng)",
+          "price": 40000,
+          "quantity": 2,
+          "selectedOptions": []
+        },
+        {
+          "foodId": "food-37",
+          "name": "Mỳ Ý Sốt Bò Bằm Jollibee",
+          "price": 45000,
+          "quantity": 1,
+          "selectedOptions": []
+        }
+      ],
+      "subtotal": 125000,
+      "deliveryFee": 16000,
+      "discount": 15000,
+      "totalAmount": 126000,
+      "paymentMethod": "COD",
+      "status": "PENDING",
+      "note": "Cho thêm muỗng nĩa dùng một lần.",
+      "createdAt": "2026-10-22T16:20:00.000Z",
+      "updatedAt": "2026-10-22T16:20:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "userId": "user-1",
+      "restaurantId": "res-1",
+      "foodId": "food-1",
+      "orderId": "order-1",
+      "rating": 5,
+      "comment": "Gà rán giao tới vẫn còn nóng hổi giòn rụm, tẩm ướp sốt cay rất đậm đà. Sẽ tiếp tục ủng hộ quán!",
+      "createdAt": "2026-10-18T13:00:00.000Z"
+    },
+    {
+      "id": "rev-2",
+      "userId": "user-1",
+      "restaurantId": "res-1",
+      "foodId": "food-5",
+      "orderId": "order-1",
+      "rating": 5,
+      "comment": "Nước ngọt đóng gói cẩn thận bọc túi giữ lạnh, lon nguyên vẹn không bị móp.",
+      "createdAt": "2026-10-18T13:05:00.000Z"
+    },
+    {
+      "id": "rev-3",
+      "userId": "user-2",
+      "restaurantId": "res-3",
+      "foodId": "food-11",
+      "orderId": "order-2",
+      "rating": 5,
+      "comment": "Pizza hải sản sốt pesto cực ngon! Đế viền phô mai béo ngậy thơm nức mũi, hải sản tươi rói.",
+      "createdAt": "2026-10-19T20:00:00.000Z"
+    },
+    {
+      "id": "rev-4",
+      "userId": "user-2",
+      "restaurantId": "res-3",
+      "foodId": "food-14",
+      "orderId": "order-2",
+      "rating": 4,
+      "comment": "Cánh gà BBQ tẩm ướp vừa vặn, nướng thơm lừng, thịt gà mềm ngọt không hề bị khô.",
+      "createdAt": "2026-10-19T20:02:00.000Z"
+    },
+    {
+      "id": "rev-5",
+      "userId": "user-3",
+      "restaurantId": "res-5",
+      "foodId": "food-22",
+      "orderId": "order-3",
+      "rating": 5,
+      "comment": "Sườn cốt lết dày dặn nướng thơm nức mũi, nước mắm kẹo sệt sệt đúng chuẩn vị Sài Gòn luôn.",
+      "createdAt": "2026-10-20T13:10:00.000Z"
+    },
+    {
+      "id": "rev-6",
+      "userId": "user-3",
+      "restaurantId": "res-5",
+      "foodId": "food-24",
+      "orderId": "order-3",
+      "rating": 4,
+      "comment": "Canh khổ qua nóng hổi, thịt nhồi chắc nịch nêm nếm thanh mát giải ngấy hiệu quả.",
+      "createdAt": "2026-10-20T13:12:00.000Z"
+    },
+    {
+      "id": "rev-7",
+      "userId": "user-1",
+      "restaurantId": "res-4",
+      "foodId": "food-16",
+      "orderId": null,
+      "rating": 5,
+      "comment": "Bánh mì Huỳnh Hoa đẫm pate và chả lụa, ăn nửa cái đã no căng bụng rồi. Đắt nhưng xắt ra miếng!",
+      "createdAt": "2026-10-15T09:20:00.000Z"
+    },
+    {
+      "id": "rev-8",
+      "userId": "user-2",
+      "restaurantId": "res-6",
+      "foodId": "food-26",
+      "orderId": null,
+      "rating": 5,
+      "comment": "Trà sữa Gong Cha chất lượng ổn định, trân châu hoàng kim dai giòn ngọt dịu cực kỳ hợp khẩu vị.",
+      "createdAt": "2026-10-16T15:40:00.000Z"
+    },
+    {
+      "id": "rev-9",
+      "userId": "user-3",
+      "restaurantId": "res-7",
+      "foodId": "food-31",
+      "orderId": null,
+      "rating": 5,
+      "comment": "Phở Thìn nước dùng ngọt sâu vị xương, thơm lừng tỏi xào lăn và hành lá. Ăn cùng quẩy giòn rất tuyệt.",
+      "createdAt": "2026-10-17T08:30:00.000Z"
+    },
+    {
+      "id": "rev-10",
+      "userId": "user-4",
+      "restaurantId": "res-2",
+      "foodId": "food-6",
+      "orderId": null,
+      "rating": 4,
+      "comment": "Burger bò mềm mọng nước, phô mai ngậy kết hợp sốt mayonnaise hài hòa. Giao hàng rất đúng giờ.",
+      "createdAt": "2026-10-17T19:15:00.000Z"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "promo-1",
+      "code": "FREESHIP",
+      "title": "Miễn Phí Giao Hàng Toàn Quốc",
+      "description": "Giảm tối đa 25.000đ phí giao hàng cho mọi đơn hàng từ 200.000đ.",
+      "discountType": "fixed",
+      "discountValue": 25000,
+      "minOrderValue": 200000,
+      "maxDiscount": 25000,
+      "startDate": "2026-10-01T00:00:00.000Z",
+      "endDate": "2026-11-30T23:59:59.000Z",
+      "isActive": true
+    },
+    {
+      "id": "promo-2",
+      "code": "GIAM20K",
+      "title": "Giảm Ngay 20K Cho Bữa Trưa",
+      "description": "Ưu đãi giảm ngay 20.000đ cho đơn hàng đồ ăn nhanh từ 100.000đ.",
+      "discountType": "fixed",
+      "discountValue": 20000,
+      "minOrderValue": 100000,
+      "maxDiscount": 20000,
+      "startDate": "2026-10-10T00:00:00.000Z",
+      "endDate": "2026-10-31T23:59:59.000Z",
+      "isActive": true
+    },
+    {
+      "id": "promo-3",
+      "code": "WELCOME50",
+      "title": "Ưu Đãi Bạn Mới 50K",
+      "description": "Giảm 50% tối đa 50.000đ cho đơn hàng đầu tiên của khách hàng mới.",
+      "discountType": "percentage",
+      "discountValue": 50,
+      "minOrderValue": 120000,
+      "maxDiscount": 50000,
+      "startDate": "2026-10-01T00:00:00.000Z",
+      "endDate": "2026-12-31T23:59:59.000Z",
+      "isActive": true
+    },
+    {
+      "id": "promo-4",
+      "code": "COMBOYEU",
+      "title": "Tiệc Combo Giảm 15%",
+      "description": "Giảm ngay 15% tối đa 30.000đ cho các đơn hàng combo gà rán và burger.",
+      "discountType": "percentage",
+      "discountValue": 15,
+      "minOrderValue": 80000,
+      "maxDiscount": 30000,
+      "startDate": "2026-10-15T00:00:00.000Z",
+      "endDate": "2026-11-15T23:59:59.000Z",
+      "isActive": true
+    }
+  ]
+}
