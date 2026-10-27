@@ -14,6 +14,8 @@ function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/foods" element={<Home />} />
+          <Route path="/foods/add" element={<AddFood />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Food" element={<Home/>}/>
           <Route path="/Cart" element={<Cart/>}/>

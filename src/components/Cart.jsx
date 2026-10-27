@@ -1,4 +1,3 @@
-```jsx
 import React from "react";
 
 function Cart({ cartItems, setCartItems }) {
@@ -114,4 +113,3 @@ function Cart({ cartItems, setCartItems }) {
 }
 
 export default Cart;
-```
