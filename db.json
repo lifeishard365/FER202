@@ -804,97 +804,6 @@
       "soldCount": 1560
     }
   ],
-  "foodOptions": [
-    {
-      "id": "opt-1",
-      "name": "Mức độ cay",
-      "type": "radio",
-      "required": true,
-      "items": [
-        { "id": "opt-item-101", "name": "Không cay", "price": 0 },
-        { "id": "opt-item-102", "name": "Cay vừa", "price": 0 },
-        { "id": "opt-item-103", "name": "Cay nhiều", "price": 0 }
-      ]
-    },
-    {
-      "id": "opt-2",
-      "name": "Kích cỡ Burger / Gà",
-      "type": "radio",
-      "required": true,
-      "items": [
-        { "id": "opt-item-201", "name": "Cỡ Tiêu chuẩn", "price": 0 },
-        { "id": "opt-item-202", "name": "Cỡ Lớn (Up Size)", "price": 15000 }
-      ]
-    },
-    {
-      "id": "opt-3",
-      "name": "Đế bánh Pizza",
-      "type": "radio",
-      "required": false,
-      "items": [
-        { "id": "opt-item-301", "name": "Đế dày truyền thống", "price": 0 },
-        { "id": "opt-item-302", "name": "Đế mỏng giòn", "price": 0 },
-        { "id": "opt-item-303", "name": "Viền phô mai béo ngậy", "price": 35000 }
-      ]
-    },
-    {
-      "id": "opt-4",
-      "name": "Topping Trà Sữa",
-      "type": "checkbox",
-      "required": false,
-      "items": [
-        { "id": "opt-item-401", "name": "Trân châu hoàng kim", "price": 10000 },
-        { "id": "opt-item-402", "name": "Thạch pudding trứng", "price": 10000 },
-        { "id": "opt-item-403", "name": "Kem sữa Milk Foam", "price": 15000 },
-        { "id": "opt-item-404", "name": "Thạch dừa giòn", "price": 8000 }
-      ]
-    },
-    {
-      "id": "opt-5",
-      "name": "Mức đường & đá",
-      "type": "radio",
-      "required": true,
-      "items": [
-        { "id": "opt-item-501", "name": "100% đường - 100% đá", "price": 0 },
-        { "id": "opt-item-502", "name": "70% đường - 70% đá", "price": 0 },
-        { "id": "opt-item-503", "name": "50% đường - 50% đá", "price": 0 },
-        { "id": "opt-item-504", "name": "Không đường - Không đá", "price": 0 }
-      ]
-    },
-    {
-      "id": "opt-6",
-      "name": "Món ăn kèm Cơm Tấm",
-      "type": "checkbox",
-      "required": false,
-      "items": [
-        { "id": "opt-item-601", "name": "Trứng ốp la lòng đào", "price": 10000 },
-        { "id": "opt-item-602", "name": "Thêm chả bì", "price": 12000 },
-        { "id": "opt-item-603", "name": "Cơm thêm dẻo thơm", "price": 8000 }
-      ]
-    },
-    {
-      "id": "opt-7",
-      "name": "Tùy chọn Bánh Mì",
-      "type": "checkbox",
-      "required": false,
-      "items": [
-        { "id": "opt-item-701", "name": "Thêm pate béo ngậy", "price": 10000 },
-        { "id": "opt-item-702", "name": "Không cho rau mùi, dưa leo", "price": 0 },
-        { "id": "opt-item-703", "name": "Ăn cay nhiều ớt tươi", "price": 0 }
-      ]
-    },
-    {
-      "id": "opt-8",
-      "name": "Tùy chọn Phở / Bún",
-      "type": "checkbox",
-      "required": false,
-      "items": [
-        { "id": "opt-item-801", "name": "Thêm trứng chần béo ngậy", "price": 10000 },
-        { "id": "opt-item-802", "name": "Thêm thịt tái lăn", "price": 25000 },
-        { "id": "opt-item-803", "name": "Ăn nhiều hành hoa, đầu hành", "price": 0 }
-      ]
-    }
-  ],
   "carts": [
     {
       "id": "cart-1",
@@ -905,17 +814,13 @@
           "foodId": "food-2",
           "name": "Burger Zinger Cay",
           "price": 65000,
-          "quantity": 2,
-          "selectedOptions": [
-            { "name": "Mức độ cay", "choice": "Cay vừa", "price": 0 }
-          ]
+          "quantity": 2
         },
         {
           "foodId": "food-3",
           "name": "Khoai Tây Chiên Cỡ Vừa",
           "price": 25000,
-          "quantity": 1,
-          "selectedOptions": []
+          "quantity": 1
         }
       ],
       "totalAmount": 155000,
@@ -930,14 +835,10 @@
           "foodId": "food-26",
           "name": "Trà Sữa Trân Châu Hoàng Kim (Size M)",
           "price": 55000,
-          "quantity": 2,
-          "selectedOptions": [
-            { "name": "Mức đường & đá", "choice": "50% đường - 50% đá", "price": 0 },
-            { "name": "Topping Trà Sữa", "choice": "Kem sữa Milk Foam", "price": 15000 }
-          ]
+          "quantity": 2
         }
       ],
-      "totalAmount": 140000,
+      "totalAmount": 110000,
       "updatedAt": "2026-10-22T09:15:00.000Z"
     },
     {
@@ -949,13 +850,10 @@
           "foodId": "food-16",
           "name": "Bánh Mì Thịt Nguội Đặc Biệt",
           "price": 68000,
-          "quantity": 1,
-          "selectedOptions": [
-            { "name": "Tùy chọn Bánh Mì", "choice": "Thêm pate béo ngậy", "price": 10000 }
-          ]
+          "quantity": 1
         }
       ],
-      "totalAmount": 78000,
+      "totalAmount": 68000,
       "updatedAt": "2026-10-21T18:00:00.000Z"
     },
     {
@@ -978,17 +876,13 @@
           "foodId": "food-1",
           "name": "Gà Rán Giòn Cay (1 miếng)",
           "price": 39000,
-          "quantity": 2,
-          "selectedOptions": [
-            { "name": "Mức độ cay", "choice": "Cay nhiều", "price": 0 }
-          ]
+          "quantity": 2
         },
         {
           "foodId": "food-5",
           "name": "Pepsi Lon 330ml",
           "price": 18000,
-          "quantity": 2,
-          "selectedOptions": []
+          "quantity": 2
         }
       ],
       "subtotal": 114000,
@@ -1011,23 +905,19 @@
           "foodId": "food-11",
           "name": "Pizza Hải Sản Pesto Xanh (Size M)",
           "price": 189000,
-          "quantity": 1,
-          "selectedOptions": [
-            { "name": "Đế bánh Pizza", "choice": "Viền phô mai béo ngậy", "price": 35000 }
-          ]
+          "quantity": 1
         },
         {
           "foodId": "food-14",
           "name": "Cánh Gà Nướng BBQ (4 miếng)",
           "price": 89000,
-          "quantity": 1,
-          "selectedOptions": []
+          "quantity": 1
         }
       ],
-      "subtotal": 313000,
+      "subtotal": 278000,
       "deliveryFee": 22000,
       "discount": 22000,
-      "totalAmount": 313000,
+      "totalAmount": 278000,
       "paymentMethod": "COD",
       "status": "COMPLETED",
       "note": "Cho nhiều tương ớt và tương cà nhé.",
@@ -1044,23 +934,19 @@
           "foodId": "food-22",
           "name": "Cơm Tấm Sườn Bì Chả Đặc Biệt",
           "price": 69000,
-          "quantity": 2,
-          "selectedOptions": [
-            { "name": "Món ăn kèm Cơm Tấm", "choice": "Trứng ốp la lòng đào", "price": 10000 }
-          ]
+          "quantity": 2
         },
         {
           "foodId": "food-24",
           "name": "Canh Khổ Qua Nhồi Thịt",
           "price": 25000,
-          "quantity": 1,
-          "selectedOptions": []
+          "quantity": 1
         }
       ],
-      "subtotal": 183000,
+      "subtotal": 163000,
       "deliveryFee": 17000,
       "discount": 0,
-      "totalAmount": 200000,
+      "totalAmount": 180000,
       "paymentMethod": "VNPAY",
       "status": "COMPLETED",
       "note": "Nhiều tóp mỡ và nước mắm riêng giúp mình.",
@@ -1077,17 +963,13 @@
           "foodId": "food-26",
           "name": "Trà Sữa Trân Châu Hoàng Kim (Size M)",
           "price": 55000,
-          "quantity": 3,
-          "selectedOptions": [
-            { "name": "Mức đường & đá", "choice": "70% đường - 70% đá", "price": 0 }
-          ]
+          "quantity": 3
         },
         {
           "foodId": "food-30",
           "name": "Bánh Mousse Trà Xanh",
           "price": 42000,
-          "quantity": 1,
-          "selectedOptions": []
+          "quantity": 1
         }
       ],
       "subtotal": 207000,
@@ -1110,23 +992,19 @@
           "foodId": "food-31",
           "name": "Phở Bò Tái Lăn Truyền Thống",
           "price": 75000,
-          "quantity": 2,
-          "selectedOptions": [
-            { "name": "Tùy chọn Phở / Bún", "choice": "Thêm trứng chần béo ngậy", "price": 10000 }
-          ]
+          "quantity": 2
         },
         {
           "foodId": "food-34",
           "name": "Quẩy Giòn Ăn Kèm Phở (5 cái)",
           "price": 15000,
-          "quantity": 1,
-          "selectedOptions": []
+          "quantity": 1
         }
       ],
-      "subtotal": 185000,
+      "subtotal": 165000,
       "deliveryFee": 19000,
       "discount": 0,
-      "totalAmount": 204000,
+      "totalAmount": 184000,
       "paymentMethod": "COD",
       "status": "CONFIRMED",
       "note": "Nước dùng thật sôi nóng và để bánh phở riêng.",
@@ -1143,15 +1021,13 @@
           "foodId": "food-36",
           "name": "Gà Sài Gòn Sốt Cay (1 miếng)",
           "price": 40000,
-          "quantity": 2,
-          "selectedOptions": []
+          "quantity": 2
         },
         {
           "foodId": "food-37",
           "name": "Mỳ Ý Sốt Bò Bằm Jollibee",
           "price": 45000,
-          "quantity": 1,
-          "selectedOptions": []
+          "quantity": 1
         }
       ],
       "subtotal": 125000,
