@@ -4,8 +4,10 @@ const API = axios.create({
 });
 
 export const getFood = () => API.get("/foods");
-export const getCategory = () => API.get("/categorys");
+export const getCategory = () => API.get("/categories");
 export const getRestaurant = () => API.get("/restaurants");
 export const getOrder = () => API.get("/orders");
 export const getUser = () => API.get("/users");
 export const addFood = (Food) => API.post("/foods", Food);
+export const getReview = () => API.get("/reviews");
+export const addReview = (Review) => API.post("/reviews", Review);
