@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Alert, Badge, Button, Spinner, Table } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
-import { API_URL, ORDER_STATUS, formatPrice } from "../config/api";
+import { API_URL } from "../config/api";
+import { ORDER_STATUS } from "../config/constants";
+import { formatPrice } from "../utils/format";
 
 function OrderDetails() {
-  const { id } = useParams(); // lấy mã đơn từ URL /OrderList/:id
+  const { id } = useParams();
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

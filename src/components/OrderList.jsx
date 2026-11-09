@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Alert, Badge, Button, Spinner, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { API_URL, ORDER_STATUS, formatPrice } from "../config/api";
+import { API_URL } from "../config/api";
+import { ORDER_STATUS } from "../config/constants";
+import { formatPrice } from "../utils/format";
 
 function OrderList() {
   const [orders, setOrders] = useState([]);
