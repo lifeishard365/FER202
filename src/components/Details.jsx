@@ -1,10 +1,11 @@
 import { Table, Button } from "react-bootstrap";
 import { useState, useEffect, useMemo } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { getFood, getCategory, getRestaurant } from "../config/api";
 
-function Detail() {
+function Detail({ onAddToCart }) {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [food, setFood] = useState(null);
   const [category, setCategory] = useState([]);
   const [restaurant, setRestaurant] = useState([]);
@@ -62,7 +63,7 @@ function Detail() {
         </h2>
       </div>
       <div>
-        <Table classname="mb-0">
+        <Table className="mb-0">
           <tbody>
             <tr>
               <td>
@@ -98,8 +99,12 @@ function Detail() {
             </tr>
           </tbody>
         </Table>
-          <Button as={Link} variant="success" 
-          // to={`cart/${food.id}`}
+          <Button
+            variant="success"
+            onClick={() => {
+              onAddToCart(food);
+              navigate("/Cart");
+            }}
           >
             Add to Cart
           </Button>

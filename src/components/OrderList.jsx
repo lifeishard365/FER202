@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import { Table } from "react-bootstrap";
+import { getOrder } from "../config/api";
 
 function OrderList() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:9999/orders")
+    getOrder()
       .then((res) => setOrders(res.data))
       .catch((error) => console.log(error.message));
   }, []);
