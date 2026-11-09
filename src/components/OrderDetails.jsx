@@ -1,29 +1,46 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Alert, Badge, Button, Spinner, Table } from "react-bootstrap";
+import { Alert, Badge, Button, Card, Spinner, Table } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import { API_URL } from "../config/api";
-import { ORDER_STATUS } from "../config/constants";
-import { formatPrice } from "../utils/format";
+import { ORDER_STATUS, PAYMENT_METHOD } from "../config/constants";
+import { formatPrice, formatDateTime } from "../utils/format";
 
 function OrderDetails() {
   const { id } = useParams();
   const [order, setOrder] = useState(null);
+  const [restaurant, setRestaurant] = useState(null);
+  const [address, setAddress] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios
-      .get(`${API_URL}/orders/${id}`)
-      .then((res) => setOrder(res.data))
-      .catch(() => setError("Không tìm thấy đơn hàng."))
-      .finally(() => setLoading(false));
+    const loadOrder = async () => {
+      try {
+        const orderRes = await axios.get(`${API_URL}/orders/${id}`);
+        const data = orderRes.data;
+        setOrder(data);
+
+        // Nhà hàng và địa chỉ lỗi thì vẫn hiện đơn, chỉ thiếu 2 dòng này
+        const [restaurantRes, addressRes] = await Promise.all([
+          axios.get(`${API_URL}/restaurants/${data.restaurantId}`).catch(() => null),
+          axios.get(`${API_URL}/addresses/${data.addressId}`).catch(() => null),
+        ]);
+        setRestaurant(restaurantRes?.data ?? null);
+        setAddress(addressRes?.data ?? null);
+      } catch {
+        setError("Không tìm thấy đơn hàng.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadOrder();
   }, [id]);
 
   if (loading) return <Spinner animation="border" className="m-4" />;
 
   const status = ORDER_STATUS[order?.status];
-  const items = order?.items ?? [];
 
   return (
     <div className="container mt-4">
@@ -38,12 +55,26 @@ function OrderDetails() {
 
       {order && (
         <>
-          <p>
-            Trạng thái:{" "}
-            <Badge bg={status?.color ?? "secondary"}>
-              {status?.label ?? order.status}
-            </Badge>
-          </p>
+          <Card className="mb-3">
+            <Card.Body>
+              <p className="mb-1">
+                Trạng thái:{" "}
+                <Badge bg={status?.color ?? "secondary"}>
+                  {status?.label ?? order.status}
+                </Badge>
+              </p>
+              <p className="mb-1">Nhà hàng: {restaurant?.name ?? "Không rõ"}</p>
+              {/* Đổi fullAddress theo tên field thật trong bảng addresses */}
+              <p className="mb-1">Giao đến: {address?.fullAddress ?? order.addressId}</p>
+              <p className="mb-1">
+                Thanh toán:{" "}
+                {PAYMENT_METHOD[order.paymentMethod] ?? order.paymentMethod}
+              </p>
+              <p className="mb-1">Ngày đặt: {formatDateTime(order.createdAt)}</p>
+              <p className="mb-0">Cập nhật: {formatDateTime(order.updatedAt)}</p>
+              {order.note && <p className="mt-2 mb-0">Ghi chú: {order.note}</p>}
+            </Card.Body>
+          </Card>
 
           <Table bordered>
             <thead>
@@ -55,8 +86,8 @@ function OrderDetails() {
               </tr>
             </thead>
             <tbody>
-              {items.map((item, index) => (
-                <tr key={index}>
+              {order.items.map((item) => (
+                <tr key={item.foodId}>
                   <td>{item.name}</td>
                   <td>{formatPrice(item.price)}</td>
                   <td>{item.quantity}</td>
@@ -66,7 +97,12 @@ function OrderDetails() {
             </tbody>
           </Table>
 
-          <h5 className="text-end">Tổng: {formatPrice(order.totalAmount)}</h5>
+          <div className="text-end">
+            <p className="mb-1">Tạm tính: {formatPrice(order.subtotal)}</p>
+            <p className="mb-1">Phí giao hàng: {formatPrice(order.deliveryFee)}</p>
+            <p className="mb-1">Giảm giá: - {formatPrice(order.discount)}</p>
+            <h5>Tổng cộng: {formatPrice(order.totalAmount)}</h5>
+          </div>
         </>
       )}
     </div>

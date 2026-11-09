@@ -3,21 +3,37 @@ import axios from "axios";
 import { Alert, Badge, Button, Spinner, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { API_URL } from "../config/api";
-import { ORDER_STATUS } from "../config/constants";
-import { formatPrice } from "../utils/format";
+import { ORDER_STATUS, PAYMENT_METHOD } from "../config/constants";
+import { formatPrice, formatDateTime } from "../utils/format";
 
 function OrderList() {
   const [orders, setOrders] = useState([]);
+  const [restaurants, setRestaurants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    axios
-      .get(`${API_URL}/orders`)
-      .then((res) => setOrders(res.data))
+    Promise.all([
+      axios.get(`${API_URL}/orders`),
+      axios.get(`${API_URL}/restaurants`),
+    ])
+      .then(([orderRes, restaurantRes]) => {
+        // Đơn mới nhất lên đầu
+        const sorted = [...orderRes.data].sort(
+          (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
+        );
+        setOrders(sorted);
+        setRestaurants(restaurantRes.data);
+      })
       .catch(() => setError("Không thể tải danh sách đơn hàng."))
       .finally(() => setLoading(false));
   }, []);
+
+  const restaurantName = (id) =>
+    restaurants.find((r) => r.id === id)?.name ?? "Không rõ";
+
+  const countItems = (items) =>
+    items.reduce((sum, item) => sum + item.quantity, 0);
 
   if (loading) return <Spinner animation="border" className="m-4" />;
 
@@ -37,12 +53,16 @@ function OrderList() {
       )}
 
       {orders.length > 0 && (
-        <Table bordered hover>
+        <Table bordered hover responsive>
           <thead>
             <tr>
               <th>Mã đơn</th>
+              <th>Nhà hàng</th>
+              <th>Số món</th>
               <th>Tổng tiền</th>
+              <th>Thanh toán</th>
               <th>Trạng thái</th>
+              <th>Ngày đặt</th>
               <th></th>
             </tr>
           </thead>
@@ -52,12 +72,18 @@ function OrderList() {
               return (
                 <tr key={order.id}>
                   <td>{order.id}</td>
+                  <td>{restaurantName(order.restaurantId)}</td>
+                  <td>{countItems(order.items)}</td>
                   <td>{formatPrice(order.totalAmount)}</td>
+                  <td>
+                    {PAYMENT_METHOD[order.paymentMethod] ?? order.paymentMethod}
+                  </td>
                   <td>
                     <Badge bg={status?.color ?? "secondary"}>
                       {status?.label ?? order.status}
                     </Badge>
                   </td>
+                  <td>{formatDateTime(order.createdAt)}</td>
                   <td>
                     <Button
                       as={Link}
