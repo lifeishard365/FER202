@@ -2,14 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Alert, Badge, Button, Spinner, Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-const API_URL = "http://localhost:9999";
-
-const statusVariant = {
-  pending: "warning",
-  completed: "success",
-  cancelled: "danger",
-};
+import { API_URL, ORDER_STATUS, formatPrice } from "../config/api";
 
 function OrderList() {
   const [orders, setOrders] = useState([]);
@@ -31,13 +24,16 @@ function OrderList() {
       <div className="d-flex justify-content-between align-items-center mb-3">
         <h3 className="mb-0">Danh sách đơn hàng</h3>
         <Button as={Link} to="/foods" variant="outline-secondary">
-          Quay lại
+          Quay lại menu
         </Button>
       </div>
+
       {error && <Alert variant="danger">{error}</Alert>}
+
       {!error && orders.length === 0 && (
         <Alert variant="light">Chưa có đơn hàng nào.</Alert>
       )}
+
       {orders.length > 0 && (
         <Table bordered hover>
           <thead>
@@ -49,22 +45,30 @@ function OrderList() {
             </tr>
           </thead>
           <tbody>
-            {orders.map((o) => (
-              <tr key={o.id}>
-                <td>{o.id}</td>
-                <td>{Number(o.totalAmount).toLocaleString("vi-VN")} ₫</td>
-                <td>
-                  <Badge bg={statusVariant[o.status] ?? "secondary"}>
-                    {o.status}
-                  </Badge>
-                </td>
-                <td>
-                  <Button as={Link} to={`/orders/${o.id}`} size="sm" variant="outline-primary">
-                    Chi tiết
-                  </Button>
-                </td>
-              </tr>
-            ))}
+            {orders.map((order) => {
+              const status = ORDER_STATUS[order.status];
+              return (
+                <tr key={order.id}>
+                  <td>{order.id}</td>
+                  <td>{formatPrice(order.totalAmount)}</td>
+                  <td>
+                    <Badge bg={status?.color ?? "secondary"}>
+                      {status?.label ?? order.status}
+                    </Badge>
+                  </td>
+                  <td>
+                    <Button
+                      as={Link}
+                      to={`/OrderList/${order.id}`}
+                      size="sm"
+                      variant="outline-primary"
+                    >
+                      Chi tiết
+                    </Button>
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </Table>
       )}
