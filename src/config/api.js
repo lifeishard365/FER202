@@ -9,5 +9,7 @@ export const getRestaurant = () => API.get("/restaurants");
 export const getOrder = () => API.get("/orders");
 export const getUser = () => API.get("/users");
 export const addFood = (Food) => API.post("/foods", Food);
+export const updateFood = (id, food) => API.patch(`/foods/${id}`, food);
+export const deleteFood = (id) => API.delete(`/foods/${id}`);
 export const getReview = () => API.get("/reviews");
 export const addReview = (Review) => API.post("/reviews", Review);

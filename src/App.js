@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import AddFood from "./components/AddFood";
+import FoodManagement from "./components/FoodManagement";
 import Detail from "./components/Details";
 import Cart from "./components/Cart";
 import OrderList from "./components/OrderList";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Food" element={<Home/>}/>
+          <Route path="/Food/manage" element={<FoodManagement />} />
           <Route
             path="/Cart"
             element={<Cart cartItems={cartItems} setCartItems={setCartItems} />}

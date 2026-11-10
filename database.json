@@ -804,12 +804,12 @@
       "soldCount": 1560
     },
     {
-      "name": "bggr",
-      "price": 50000,
+      "name": "bggg",
+      "price": 51111,
       "description": "bggr",
       "image": "https://product.hstatic.net/200000848723/product/37_4032a7a363934af3bf9d15a93ff08e19_1024x1024.jpg",
-      "categoryId": "res-1",
-      "restaurantId": "cat-1",
+      "categoryId": "cat-1",
+      "restaurantId": "res-1",
       "originalPrice": 50000,
       "isAvailable": true,
       "rating": 0,

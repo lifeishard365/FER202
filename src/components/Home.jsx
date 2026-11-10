@@ -120,9 +120,14 @@ function Home() {
             Tìm món ăn yêu thích từ các nhà hàng.
           </p>
         </div>
-        <Button as={Link} to="/Food/add" variant="primary">
-          + Thêm món ăn
-        </Button>
+        <div className="d-flex flex-wrap gap-2">
+          <Button as={Link} to="/Food/manage" variant="outline-primary">
+            Quản lý món
+          </Button>
+          <Button as={Link} to="/Food/add" variant="primary">
+            + Thêm món ăn
+          </Button>
+        </div>
       </div>
 
       {error && <Alert variant="danger">{error}</Alert>}
