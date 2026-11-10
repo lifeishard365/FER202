@@ -115,7 +115,7 @@ function Home() {
       <div className="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
         <div>
           <p className="text-muted mb-1">THỰC ĐƠN NHÀ HÀNG</p>
-          <h1 className="h2 mb-0">Khám phá món ngon</h1>
+          <h1 className="h2 mb-0">Chọn món</h1>
           <p className="text-muted mt-2 mb-0">
             Tìm món ăn yêu thích từ các nhà hàng.
           </p>

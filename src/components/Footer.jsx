@@ -1,15 +1,9 @@
 function Footer() {
   return (
-    <>
-      <div>
+      <div className="text-center mt-4 mb-4 "style={{ backgroundColor: "lightgray", padding: "20px" }}>
         <h5>Project by group 2:</h5>
-        <p>Tran Tuan Linh</p>
-        <p>Pham Quang Hung</p>
-        <p>Tran Nhat Minh</p>
-        <p>Do Duc Hao</p>
-        <p>Can Dinh Lam</p>
+        <p>Tran Tuan Linh, Pham Quang Hung, Tran Nhat Minh, Do Duc Hao, Can Dinh Lam</p>
       </div>
-    </>
   );
 }
 export default Footer;

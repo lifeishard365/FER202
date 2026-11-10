@@ -45,8 +45,8 @@ function App() {
           <Route path="/Food/:id" element={<Detail onAddToCart={addToCart} />}/>
           <Route path="/OrderList" element={<OrderList/>}/>
           <Route path="/OrderList/:id" element={<OrderDetails/>}/>
-          <Route path="/Footer" element={<Footer/>}/>
         </Routes>
+        <br></br>
         <Footer />
       </Container>
     </BrowserRouter>
