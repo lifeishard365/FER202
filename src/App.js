@@ -8,7 +8,6 @@ import Detail from "./components/Details";
 import Cart from "./components/Cart";
 import OrderList from "./components/OrderList";
 import OrderDetails from "./components/OrderDetails";
-import Footer from "./components/Footer";
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -47,7 +46,6 @@ function App() {
           <Route path="/OrderList/:id" element={<OrderDetails/>}/>
         </Routes>
         <br></br>
-        <Footer />
       </Container>
     </BrowserRouter>
   );

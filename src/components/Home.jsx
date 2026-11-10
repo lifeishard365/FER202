@@ -10,6 +10,8 @@ import {
   Pagination,
   Row,
   Spinner,
+  Nav,
+  NavLink,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -116,18 +118,24 @@ function Home() {
         <div>
           <p className="text-muted mb-1">THỰC ĐƠN NHÀ HÀNG</p>
           <h1 className="h2 mb-0">Chọn món</h1>
-          <p className="text-muted mt-2 mb-0">
-            Tìm món ăn yêu thích từ các nhà hàng.
-          </p>
         </div>
-        <div className="d-flex flex-wrap gap-2">
-          <Button as={Link} to="/Food/manage" variant="outline-primary">
-            Quản lý món
-          </Button>
-          <Button as={Link} to="/Food/add" variant="primary">
-            + Thêm món ăn
-          </Button>
+        <div>
+          <Nav style={{ gap: "10px" }} className="justify-content-center">
+            <Nav.Link as={Link} to="/Food/manage" style={{backgroundColor: "var(--bs-secondary)", padding: "10px", borderRadius: "5px" ,color: "white"}} onMouseEnter={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-success)")} onMouseLeave={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-secondary)")}>
+              Quản lý món
+            </Nav.Link>
+            <NavLink as={Link} to="/Food/add" style={{backgroundColor: "var(--bs-secondary)", padding: "10px", borderRadius: "5px", color: "white"}} onMouseEnter={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-success)")} onMouseLeave={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-secondary)")}>
+              + Thêm món ăn
+            </NavLink>  
+            <NavLink as={Link} to="/Cart" style={{backgroundColor: "var(--bs-secondary)", padding: "10px", borderRadius: "5px", color: "white"}} onMouseEnter={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-success)")} onMouseLeave={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-secondary)")}>
+              Giỏ hàng
+            </NavLink>
+            <NavLink as={Link} to="/OrderList" style={{backgroundColor: "var(--bs-secondary)", padding: "10px", borderRadius: "5px", color: "white"}} onMouseEnter={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-success)")} onMouseLeave={(event) => (event.currentTarget.style.backgroundColor = "var(--bs-secondary)")}>
+              Orders
+            </NavLink>
+          </Nav>
         </div>
+
       </div>
 
       {error && <Alert variant="danger">{error}</Alert>}
