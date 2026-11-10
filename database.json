@@ -802,6 +802,20 @@
       "isAvailable": true,
       "rating": 4.8,
       "soldCount": 1560
+    },
+    {
+      "name": "bggr",
+      "price": 50000,
+      "description": "bggr",
+      "image": "https://product.hstatic.net/200000848723/product/37_4032a7a363934af3bf9d15a93ff08e19_1024x1024.jpg",
+      "categoryId": "res-1",
+      "restaurantId": "cat-1",
+      "originalPrice": 50000,
+      "isAvailable": true,
+      "rating": 0,
+      "soldCount": 0,
+      "createdAt": "2026-11-10T03:42:37.353Z",
+      "id": "3_iGsXq"
     }
   ],
   "carts": [

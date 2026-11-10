@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   Alert,
   Button,
@@ -10,10 +9,8 @@ import {
   Row,
   Spinner,
 } from "react-bootstrap";
-import {getCategory, getRestaurant, addFood} from "../config/api";
+import { getCategory, getRestaurant, addFood } from "../config/api";
 import { Link, useNavigate } from "react-router-dom";
-
-const API_URL = "http://localhost:9999";
 
 function AddFood() {
   const navigate = useNavigate();
@@ -34,15 +31,13 @@ function AddFood() {
   useEffect(() => {
     const loadFormData = async () => {
       try {
-        const [categoryResponse, restaurantResponse] =
-          await Promise.all([
-            getRestaurant(),
-            getCategory(),
-                  ]);
+        const [categoryResponse, restaurantResponse] = await Promise.all([
+          getCategory(),
+          getRestaurant(),
+        ]);
 
         setCategories(categoryResponse.data);
         setRestaurants(restaurantResponse.data);
-        
       } catch (requestError) {
         setError(
           "Không thể tải danh mục."
@@ -78,7 +73,7 @@ function AddFood() {
 
     setSubmitting(true);
     try {
-      await axios.post(`${API_URL}/foods`, {
+      await addFood({
         ...form,
         price,
         originalPrice: price,
