@@ -5,11 +5,11 @@ import { getOrder, getOrderByUser, getRestaurant } from "../config/api";
 import { useAuth } from "../context/AuthContext";
 
 const ORDER_STATUS = {
-  PENDING: { label: "Chờ xác nhận", color: "#d97706" },
-  CONFIRMED: { label: "Đã xác nhận", color: "#0891b2" },
-  DELIVERING: { label: "Đang giao", color: "#0d6efd" },
-  COMPLETED: { label: "Hoàn thành", color: "#198754" },
-  CANCELLED: { label: "Đã hủy", color: "#dc3545" },
+  PENDING: { label: "Chờ xác nhận", color: "orange" },
+  CONFIRMED: { label: "Đã xác nhận", color: "cyan" },
+  DELIVERING: { label: "Đang giao", color: "blue" },
+  COMPLETED: { label: "Hoàn thành", color: "green" },
+  CANCELLED: { label: "Đã hủy", color: "red" },
 };
 
 const PAYMENT_METHOD = {
