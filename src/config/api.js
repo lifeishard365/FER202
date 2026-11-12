@@ -14,3 +14,11 @@ export const updateFood = (id, food) => API.patch(`/foods/${id}`, food);
 export const deleteFood = (id) => API.delete(`/foods/${id}`);
 export const getReview = () => API.get("/reviews");
 export const addReview = (Review) => API.post("/reviews", Review);
+
+export const findUser = (email, password) =>
+    API.get("/users", { params: { email, password } });
+export const getUserByEmail = (email) => API.get("/users", { params: { email } });
+export const addUser = (user) => API.post("/users", user);
+export const getOrderByUser = (userId) => API.get("/orders", { params: { userId } });
+export const updateOrder = (id, data) => API.patch(`/orders/${id}`, data);
+export const getAddressById = (id) => API.get(`/addresses/${id}`);
